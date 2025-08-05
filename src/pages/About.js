@@ -1,3 +1,15 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-const About = () => <div style={{ padding: '2rem' }}>Il Soul Rock nasce da un'idea di famiglia: fondere ospitalità, icone pop e tecnologia in un ristorante-museo unico.</div>; export default About;
+const About = () => {
+  const { t } = useTranslation();
+
+  return (
+    <div style={{ padding: '2rem' }}>
+      <h1>{t('about_title')}</h1>
+      <p>{t('about_text')}</p>
+    </div>
+  );
+};
+
+export default About;
